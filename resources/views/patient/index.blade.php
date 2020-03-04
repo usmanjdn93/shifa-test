@@ -7,7 +7,6 @@
                 <div class="card">
                     <div class="card-header">Dashboard
                         <a class="btn btn-primary" style="float: right" href="{{ route('patients.create') }}">Add Patient</a>
-                        <a class="btn btn-primary" style="float: right;margin-right: 10px;" href="{{ route('patients.search') }}">Search Patient</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered" id="patients-table">
