@@ -22,6 +22,6 @@ Auth::routes([
 ]);
 Route::get('/patients/search','PatientsSearchController@showPage')->name('patients.search');
 
-Route::get('/patients/data','PatientsController@data')->name('patients.data');
-Route::resource('/patients', 'PatientsController');
+Route::get('/patients/data','PatientsController@data')->name('patients.data')->middleware('auth');
+Route::resource('/patients', 'PatientsController')->middleware('auth');
 

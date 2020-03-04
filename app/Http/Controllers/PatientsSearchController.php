@@ -19,9 +19,13 @@ class PatientsSearchController extends Controller
     {
         if ($request->has('mr_no')) {
             $patient = Patient::with('patientVitals')->find($request->input('mr_no'));
-            return view('patient.search', compact('patient'));
+            return response()->json([
+                'data' => $patient
+            ]);
         } else {
-            return view('patient.search');
+            return response()->json([
+                'data' => 'data not found'
+            ]);
         }
     }
 
